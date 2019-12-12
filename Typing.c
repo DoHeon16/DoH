@@ -35,9 +35,10 @@ void menu(){
 		__fpurge(stdin);
 		switch(choice){
 			case 1:
-				printf("\n다음 노래 중 하나를 선택해주세요\n\n1. Taylor Swift - 22\n2. Sia - Alive\n\n==>  ");
+				printf("\n다음 노래 중 하나를 선택해주세요\n\n1. Taylor Swift - 22\n2. Sia - Alive\n3. Slchld - she likes spring, I prefer winter\n4. PRETTYMUCH - Summer on you\n\n==>  ");
 
 				scanf("%c",num);
+
 				strcat(name,num);
 				strcat(name,".txt");
 
@@ -150,7 +151,7 @@ void printLine(int fd){
 				n=strlen(input);
 			}
 	
-			checkLetter(strlen(_buf),_buf,input);
+			checkLetter(n,_buf,input);
 			memset(_buf,'\0',sizeof(_buf));	
 		}
 		else{
@@ -194,7 +195,7 @@ void checkLetter(int n,char* _buf, char* input){
 			//공백과 문자 처리
 			if((input[i]==' '&&_buf[i]!=' ')||
 					(input[i]!=' '&&_buf[i]==' ')){
-				printf("공백비교\n");
+				//printf("공백비교\n");
 			
 				size++;
 				continue;
@@ -210,5 +211,5 @@ void checkLetter(int n,char* _buf, char* input){
 		}
 	}
 	//size--;
-	printf("size : %d\n",size);
+	//printf("size : %d\n",size);
 }
